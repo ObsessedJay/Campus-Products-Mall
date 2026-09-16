@@ -1,0 +1,109 @@
+spring:
+  application:
+    name: campus-creative-flash-sale
+  datasource:
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/campus_creative?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai}
+    username: ${MYSQL_USERNAME:}
+    password: ${MYSQL_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      mode: ${SQL_INIT_MODE:never}
+  jackson:
+    default-property-inclusion: non_null
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: ${RABBITMQ_PORT:5672}
+    username: ${RABBITMQ_USERNAME:}
+    password: ${RABBITMQ_PASSWORD:}
+    listener:
+      simple:
+        default-requeue-rejected: false
+  mail:
+    host: ${MAIL_HOST:smtp.qq.com}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          ssl:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+  servlet:
+    multipart:
+      max-file-size: ${MAX_MULTIPART_FILE_SIZE:6MB}
+      max-request-size: ${MAX_MULTIPART_REQUEST_SIZE:6MB}
+
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+app:
+  search:
+    enabled: ${ELASTICSEARCH_ENABLED:false}
+    endpoint: ${ELASTICSEARCH_ENDPOINT:http://localhost:9200}
+    index: ${ELASTICSEARCH_PRODUCT_INDEX:campus-products}
+  storage:
+    enabled: ${MINIO_ENABLED:false}
+    endpoint: ${MINIO_ENDPOINT:http://localhost:9000}
+    access-key: ${MINIO_ACCESS_KEY:}
+    secret-key: ${MINIO_SECRET_KEY:}
+    bucket: ${MINIO_BUCKET:campus-creative}
+    max-image-bytes: ${MAX_IMAGE_BYTES:5242880}
+    max-image-dimension: ${MAX_IMAGE_DIMENSION:1920}
+    jpeg-quality: ${JPEG_QUALITY:0.82}
+    orphan-retention-hours: ${IMAGE_ORPHAN_RETENTION_HOURS:24}
+    cleanup-scan-ms: ${IMAGE_CLEANUP_SCAN_MS:3600000}
+  product:
+    max-images: ${PRODUCT_MAX_IMAGES:8}
+  websocket:
+    allowed-origin-patterns: ${WEBSOCKET_ALLOWED_ORIGIN_PATTERNS:http://localhost:*,http://127.0.0.1:*}
+  security:
+    jwt-secret: ${JWT_SECRET}
+    token-ttl: ${JWT_TOKEN_TTL:7200}
+    refresh-token-ttl: ${REFRESH_TOKEN_TTL:604800}
+    refresh-cookie-secure: ${REFRESH_COOKIE_SECURE:false}
+    request-guard:
+      enabled: ${REQUEST_GUARD_ENABLED:true}
+      auth-max-requests: ${AUTH_RATE_LIMIT:30}
+      auth-window-seconds: ${AUTH_RATE_WINDOW_SECONDS:60}
+      write-max-requests: ${WRITE_RATE_LIMIT:120}
+      write-window-seconds: ${WRITE_RATE_WINDOW_SECONDS:60}
+      flash-sale-max-requests: ${FLASH_SALE_RATE_LIMIT:10}
+      flash-sale-window-seconds: ${FLASH_SALE_RATE_WINDOW_SECONDS:1}
+      login-failure-limit: ${LOGIN_FAILURE_LIMIT:5}
+      login-block-seconds: ${LOGIN_BLOCK_SECONDS:900}
+  order:
+    expiration-scan-ms: ${ORDER_EXPIRATION_SCAN_MS:60000}
+  activity:
+    state-scan-ms: ${ACTIVITY_STATE_SCAN_MS:10000}
+  flash-sale:
+    enabled: ${FLASH_SALE_ENABLED:true}
+    redis-retention-hours: ${FLASH_SALE_REDIS_RETENTION_HOURS:24}
+    consumer-concurrency: ${FLASH_SALE_CONSUMER_CONCURRENCY:2}
+  notification:
+    enabled: ${NOTIFICATION_ENABLED:true}
+  auth:
+    captcha-ttl-seconds: ${CAPTCHA_TTL_SECONDS:300}
+    email-code-ttl-seconds: ${EMAIL_CODE_TTL_SECONDS:600}
+    email-code-cooldown-seconds: ${EMAIL_CODE_COOLDOWN_SECONDS:60}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

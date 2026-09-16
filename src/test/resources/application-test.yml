@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:campus_creative;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  sql:
+    init:
+      mode: always
+  data:
+    redis:
+      repositories:
+        enabled: false
+  rabbitmq:
+    listener:
+      simple:
+        auto-startup: false
+
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
+
+app:
+  storage:
+    enabled: false
+  security:
+    jwt-secret: test-secret-key-with-at-least-32-bytes-long
+    token-ttl: 3600
+    request-guard:
+      enabled: false
+  order:
+    expiration-scan-ms: 3600000
+  flash-sale:
+    enabled: false
+  notification:
+    enabled: false

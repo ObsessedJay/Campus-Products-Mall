@@ -1,0 +1,42 @@
+[
+  {
+    "file": "products/annual-art-booklet.png",
+    "width": 1200,
+    "height": 900,
+    "assetType": "product-mockup",
+    "prompt": "Use case: product-mockup | Asset type: campus marketplace catalog product image | Primary request: a truthful physical annual art booklet made by a campus art club, with a richly painted cover, coral cloth spine, visible cream page block, and small green edition mark | Scene/backdrop: overhead still life on recycled paper with clipped art proofs | Style/medium: editorial product photography assembled from a licensed source photograph and locally rendered print materials | Composition/framing: landscape 4:3, booklet is the unmistakable central object, no UI chrome | Lighting/mood: soft window light, tactile and archival | Color palette: recycled-paper ivory, black ink, coral, campus green | Materials/textures: coated art paper, cloth binding, paper fibers, printed paint texture | Constraints: product must read as an annual art booklet; product-cover lettering only; no price, status, button, watermark, or interface text",
+    "origin": "Local deterministic source composite. Cover artwork source: Unsplash photo 1580136579312-94651dfd596d, https://images.unsplash.com/photo-1580136579312-94651dfd596d, used under the Unsplash License. Booklet, binding, shadows, paper ground, and edition graphics authored locally with Pillow."
+  },
+  {
+    "file": "products/graduation-shirt.png",
+    "width": 1200,
+    "height": 900,
+    "assetType": "product-mockup",
+    "prompt": "Use case: product-mockup | Asset type: campus marketplace catalog product image | Primary request: a truthful white graduation commemorative T-shirt with a restrained campus-green and coral CLASS OF 2026 screen print on the chest | Scene/backdrop: real person wearing the shirt in a softly blurred everyday setting | Style/medium: natural product photography with a locally composited garment print | Composition/framing: landscape 4:3 torso crop, shirt and print fully legible as the merchandise, no UI chrome | Lighting/mood: soft daylight, candid catalog finish | Color palette: white cotton, black ink, campus green, coral | Materials/textures: real cotton weave and slightly imperfect screen-print ink | Constraints: product must read as a graduation shirt; printed garment artwork only; no price, status, button, watermark, unrelated logo, or interface text",
+    "origin": "Local deterministic source composite. Shirt photograph source: Unsplash photo 1521572163474-6864f9cf17ab, https://images.unsplash.com/photo-1521572163474-6864f9cf17ab, used under the Unsplash License. Graduation print authored and composited locally with Pillow."
+  },
+  {
+    "file": "products/astronomy-journal.png",
+    "width": 1200,
+    "height": 900,
+    "assetType": "product-mockup",
+    "prompt": "Use case: product-mockup | Asset type: campus marketplace catalog product image | Primary request: a truthful clothbound astronomy field journal with star-chart linework, an observation-log title, coral elastic, and visible cream pages | Scene/backdrop: overhead tabletop still life on a real wood surface | Style/medium: editorial product photography assembled from a licensed source photograph and a locally rendered journal cover | Composition/framing: landscape 4:3, journal dominates the frame at a natural angle, no UI chrome | Lighting/mood: warm quiet study light | Color palette: near-black green cloth, cream, coral, muted gold, black ink | Materials/textures: book cloth, debossed foil, paper page edges, wood grain | Constraints: product must read as an astronomy journal; product-cover lettering only; no price, status, button, watermark, unrelated book title, or interface text",
+    "origin": "Local deterministic source composite. Tabletop photograph source: Unsplash photo 1544947950-fa07a98d237f, https://images.unsplash.com/photo-1544947950-fa07a98d237f, used under the Unsplash License. Journal object, star chart, elastic, and shadows authored locally with Pillow and placed over the source book."
+  },
+  {
+    "file": "products/campus-route-backpack.png",
+    "width": 1200,
+    "height": 900,
+    "assetType": "product-mockup",
+    "prompt": "Use case: product-mockup | Asset type: campus marketplace catalog product image | Primary request: a truthful black commuter backpack customized with an embroidered campus-route line, coral and green stop markers, and a small CAMPUS ROUTE woven patch | Scene/backdrop: clean daylight architectural interior | Style/medium: natural product photography with locally composited embroidery and patch details | Composition/framing: landscape 4:3, backpack is fully recognizable and fills the frame, no UI chrome | Lighting/mood: crisp daylight, practical and student-focused | Color palette: black textile, cool white, campus green, coral | Materials/textures: woven nylon, stitched route line, embroidered patch | Constraints: product must read as a campus-route commuter backpack; product decoration only; no price, status, button, watermark, unrelated logo, or interface text",
+    "origin": "Local deterministic source composite. Backpack photograph source: Unsplash photo 1553062407-98eeb64c6a62, https://images.unsplash.com/photo-1553062407-98eeb64c6a62, used under the Unsplash License. Route embroidery and woven patch authored and composited locally with Pillow."
+  },
+  {
+    "file": "textures/recycled-paper.png",
+    "width": 512,
+    "height": 512,
+    "assetType": "tileable-texture",
+    "prompt": "Use case: stylized-concept | Asset type: seamless website surface texture | Primary request: subtle recycled off-white paper with fine pulp fibers, faint warm and cool flecks, and restrained press variation | Style/medium: seamless raster material texture generated procedurally | Composition/framing: evenly distributed detail with no focal point; opposite edges match exactly | Lighting/mood: flat neutral scan, quiet tactile finish | Color palette: warm ivory, soft gray, sparse kraft and campus-green fibers | Materials/textures: recycled pulp, short embedded fibers, slight tooth | Constraints: exact 512 by 512 seamless tile; no text, logo, border, vignette, directional lighting, watermark, or obvious repeated motif",
+    "origin": "Locally generated deterministic procedural raster. Pillow harmonic noise and wrapped fiber strokes; seed 20260820. No external source image and no generative API used."
+  }
+]
